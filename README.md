@@ -2,9 +2,14 @@
 
 Parda Rooms es una plataforma basada en Socket.io y Node.js que permite implementar una sala de Webinar, con soporte para Streaming (Basado en iframe), Livechat, juegos de trivia y rifas. 
 
+## Requirements
+
+Node.js 12.00 o mayor. 
+Parcel Bundler. 
+
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Solamente con clonar el repositorio debería ser suficiente.
 
 ```bash
 pip install foobar
