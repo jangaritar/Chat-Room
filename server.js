@@ -12,18 +12,20 @@ app.use(express.static(__dirname + '/public-parcel/dist/'))
 app.use(express.urlencoded({extended:true}))
 
 /** Routes */
-const rooms = {}
+// const rooms = {}
 
-app.get('/', (req, res) => {
-    res.render('index', {rooms:rooms})
-})
+// app.get('/', (req, res) => {
+//     res.render('index', {rooms:rooms})
+// })
 
 
-app.get('/:room', (req, res) => {
-    res.render('room', {roomname:req.params.room})
-})
+// app.get('/:room', (req, res) => {
+//     res.render('room', {roomname:req.params.room})
+// })
 
-server.listen(3000)
+/** Port */
+
+server.listen(5500)
 
 const users = {}
 let rifaWinner = ''

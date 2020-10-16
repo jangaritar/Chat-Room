@@ -21,7 +21,7 @@ else {
 
 document.addEventListener('DOMContentLoaded', () => {
     /** Obtaininga and rendering User List in JSON */
-    const socket = io('http://localhost:3000')
+    const socket = io('http://localhost:5500')
 
     const userContainer = document.getElementById('users-container')
 
