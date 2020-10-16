@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://localhost:3000/socket.io/socket.io.js"></script>
-    <script src="/enend.e31bb0bc.js"></script>
-    <link rel="stylesheet" href="/main.07544d9b.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="sass/main.scss">
     <title>ENEND - OZEL OPEN ROOM APP</title>
 </head>
 
@@ -25,7 +25,7 @@
                                     <input type="text" id="username" class="input" placeholder="Tu nombre">
                                 </div>
                                 <div class="field">
-                                    
+
                                 </div>
                                 <button class="button is-primary">Acceder</button>
                             </form>
@@ -38,22 +38,28 @@
                     <div class="column is-8">
                         <div class="card box">
                             <div id="iframe-container" class="card-content">
-                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/UymGJnv-WsE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/UymGJnv-WsE"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="card box has-margin-top-20">
                             <h4 class="title is-4">Espacio de actividades dinámicas 😁😁</h4>
                             <div id="game-ui-container" class="card-content is-hidden">
-                                
+
                             </div>
                             <div class="card-content is-hidden" id="rifa-ui-container">
                                 <h5 class="title is-5 has-text-primary">
                                     ¡Empezó la rifa!
                                 </h5>
-                                <p>Prueba tu suerte. Coloca en el input un número del 1 al 100 y el primero que adivine, ¡Gana!</p>
+                                <p>Prueba tu suerte. Coloca en el input un número del 1 al 100 y el primero que adivine,
+                                    ¡Gana!</p>
                                 <form class="form" id="number-form">
                                     <div class="field has-addons">
-                                        <div class="control"><input type="number" placeholder="Coloca tu número acá! 😎😎" class="input" id="number-input"></div>
+                                        <div class="control"><input type="number"
+                                                placeholder="Coloca tu número acá! 😎😎" class="input"
+                                                id="number-input"></div>
                                         <div class="control"><button class="button is-primary">¡Jugar!</button></div>
                                     </div>
                                 </form>
@@ -70,8 +76,11 @@
                             <div class="card-footer">
                                 <form class="form" id="send-container">
                                     <div class="field has-addons">
-                                        <div class="control is-expanded"><input type="text" class="input is-rounded" id="message-input" placeholder="¡Escribe algo lindo!"></div>
-                                        <div class="control"><button class="button is-primary is-rounded" id="send-button"><span class="icon"><i data-feather="send"></i></span><span>Enviar</span></button>
+                                        <div class="control is-expanded"><input type="text" class="input is-rounded"
+                                                id="message-input" placeholder="¡Escribe algo lindo!"></div>
+                                        <div class="control"><button class="button is-primary is-rounded"
+                                                id="send-button"><span class="icon"><i
+                                                        data-feather="send"></i></span><span>Enviar</span></button>
                                         </div>
                                     </div>
                                 </form>

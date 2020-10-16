@@ -5,6 +5,7 @@ Parda Rooms es una plataforma basada en Socket.io y Node.js que permite implemen
 ## Requirements
 
 Node.js 12.00 o mayor. 
+
 Parcel Bundler. 
 
 ## Installation
@@ -12,7 +13,7 @@ Parcel Bundler.
 Solamente con clonar el repositorio debería ser suficiente.
 
 ```bash
-pip install foobar
+git clone https://github.com/adriansalvatori/parda-rooms.git
 ```
 
 ## Contributing

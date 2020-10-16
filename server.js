@@ -1,4 +1,30 @@
-const io = require('socket.io')(3000)
+/** Server Related Vars */
+const express = require('express')
+const app = express()
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
+
+/** Framework Related functions */
+
+app.set('views', './views')
+app.set('view engine', 'ejs')
+app.use(express.static(__dirname + '/public-parcel/dist/'))
+app.use(express.urlencoded({extended:true}))
+
+/** Routes */
+const rooms = {}
+
+app.get('/', (req, res) => {
+    res.render('index', {rooms:rooms})
+})
+
+
+app.get('/:room', (req, res) => {
+    res.render('room', {roomname:req.params.room})
+})
+
+server.listen(3000)
+
 const users = {}
 let rifaWinner = ''
 

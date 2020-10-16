@@ -6811,7 +6811,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
-},{"feather-icons":"node_modules/feather-icons/dist/feather.js","aos":"node_modules/aos/dist/aos.js","jarallax":"node_modules/jarallax/index.js","@vizuaalog/bulmajs":"node_modules/@vizuaalog/bulmajs/src/bulma.js"}],"../../../Users/johd1/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"feather-icons":"node_modules/feather-icons/dist/feather.js","aos":"node_modules/aos/dist/aos.js","jarallax":"node_modules/jarallax/index.js","@vizuaalog/bulmajs":"node_modules/@vizuaalog/bulmajs/src/bulma.js"}],"../../../../Users/johd1/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -6839,7 +6839,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62136" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61854" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -7015,5 +7015,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../Users/johd1/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/enend.e31bb0bc.js.map
+},{}]},{},["../../../../Users/johd1/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+//# sourceMappingURL=/public-parcel.e31bb0bc.js.map
