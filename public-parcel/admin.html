@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="http://localhost:5500/socket.io/socket.io.js"></script>
     <script src="index.js"></script>
     <script src="admin.js"></script>
     <link rel="stylesheet" href="sass/main.scss">
@@ -14,6 +14,18 @@
 <body>
     <div class="pageloader has-background-link is-active"><span class="title">Bienvenido a ENEND 2020</span></div>
     <div class="hero is-fullheight admin-dashboard">
+        <div class="is-overlay">
+            <div class="hero is-fullheight">
+
+                <div class="hero-header">
+                    <img src="images/red.png" alt="">
+                </div>
+                <div class="hero-body"></div>
+                <div class="hero-footer">
+                    <img style="margin-bottom: -25px;" src="images/blue.png" alt="">
+                </div>
+            </div>
+        </div>
         <div class="hero-body">
             <div id="login-container" class="container" data-aos="fade-up">
                 <div class="column is-4 is-offset-4">
@@ -47,10 +59,7 @@
                                 </div>
                             </form>
                             <div id="iframe-container" class="card-content">
-                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/UymGJnv-WsE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/S-Mi2ANmJeQ?version=3&autoplay=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=S-Mi2ANmJeQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>

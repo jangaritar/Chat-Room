@@ -1,4 +1,3 @@
-/** 
 const admin='ozel'
 const username=prompt('Nombre de usuario Administrador:',' ')
 if (username===admin){
@@ -17,11 +16,10 @@ else {
   window.location="index.html"
 }
 
-*/
 
 document.addEventListener('DOMContentLoaded', () => {
     /** Obtaininga and rendering User List in JSON */
-    const socket = io('http://localhost:5500')
+    const socket = io('https://'+location.hostname+':5500')
 
     const userContainer = document.getElementById('users-container')
 

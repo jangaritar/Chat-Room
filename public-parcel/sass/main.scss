@@ -10,9 +10,9 @@
 // $link: #5F1957;
 
 //Colores CC
-$turquoise: #1967fa;
+$turquoise: #45AA2A;
 $turquoise-invert: #fff;
-$link: #3B5F96;
+$link: #FF6F01;
 
 
 // Update the sans-serif font family
@@ -87,7 +87,7 @@ html {
 }
 
 #message-container {
-    max-height: 60vh;
+    height: 60vh;
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
@@ -106,7 +106,7 @@ html {
 .admin-dashboard {
     .columns{
         .card-content {
-           min-height: 60vh;
+           height: 60vh;
         }
     }
 }

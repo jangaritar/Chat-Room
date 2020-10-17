@@ -118,29 +118,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"admin.js":[function(require,module,exports) {
-/** 
-const admin='ozel'
-const username=prompt('Nombre de usuario Administrador:',' ')
-if (username===admin){
-   const password1='ozel123456'
-   const password = prompt('Si quieres administrar, necesitas una contraseña. Por favor, colocala ahora:',' ')
-    if (password===password1){
-        alert("Bienvenido")
-     }
-    else {
-        alert('Contraseña incorrecta. Será enviado a la sala de inicio.')
-        window.location="index.html"
-    }
-}
-else {
-  alert('Usuario incorrecto. Será enviado a la sala de inicio.')
-  window.location="index.html"
+var admin = 'ozel';
+var username = prompt('Nombre de usuario Administrador:', ' ');
+
+if (username === admin) {
+  var password1 = 'ozel123456';
+  var password = prompt('Si quieres administrar, necesitas una contraseña. Por favor, colocala ahora:', ' ');
+
+  if (password === password1) {
+    alert("Bienvenido");
+  } else {
+    alert('Contraseña incorrecta. Será enviado a la sala de inicio.');
+    window.location = "index.html";
+  }
+} else {
+  alert('Usuario incorrecto. Será enviado a la sala de inicio.');
+  window.location = "index.html";
 }
 
-*/
 document.addEventListener('DOMContentLoaded', function () {
   /** Obtaininga and rendering User List in JSON */
-  var socket = io('http://localhost:3000');
+  var socket = io('https://' + location.hostname + ':5500');
   var userContainer = document.getElementById('users-container');
   socket.on('user-list', function (users) {
     console.log(users);
@@ -228,7 +226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61854" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55224" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

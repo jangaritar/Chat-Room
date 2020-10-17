@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /** Socket stuff */
 
-  const socket = io('http://localhost:5500')
+  const socket = io('https://'+location.hostname+':5500')
 
   const messageContainer = document.getElementById('message-container')
   const messageForm = document.getElementById('send-container')

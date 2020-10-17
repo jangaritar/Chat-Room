@@ -6717,7 +6717,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   /** Socket stuff */
 
-  var socket = io('http://localhost:3000');
+  var socket = io('https://' + location.hostname + ':5500');
   var messageContainer = document.getElementById('message-container');
   var messageForm = document.getElementById('send-container');
   var messageInput = document.getElementById('message-input');
@@ -6839,7 +6839,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61854" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55224" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
