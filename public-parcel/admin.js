@@ -1,7 +1,7 @@
-const admin='ozel'
+const admin='Jose'
 const username=prompt('Nombre de usuario Administrador:',' ')
 if (username===admin){
-   const password1='ozel123456'
+   const password1='Jose'
    const password = prompt('Si quieres administrar, necesitas una contraseña. Por favor, colocala ahora:',' ')
     if (password===password1){
         alert("Bienvenido")

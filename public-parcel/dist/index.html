@@ -4,96 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://localhost:5500/socket.io/socket.io.js"></script>
-    <script src="/public-parcel.e31bb0bc.js"></script>
-    <link rel="stylesheet" href="/main.07544d9b.css">
-    <title>ENEND - OZEL OPEN ROOM APP</title>
+    <script src="http://localhost:5500/socket.io/socket.io.js" defer=""></script>
+    <script src="/admin.3d214d75.js" defer=""></script>
+    <link rel="stylesheet" href="/admin.8d8029cf.css">
+    <title>CHAT ROOM</title>
 </head>
 
 <body>
-    <div class="pageloader has-background-link is-active"><span class="title">Bienvenido a ENEND 2020</span></div>
-    <div class="hero is-fullheight is-relative">
-        <div class="is-overlay">
-            <div class="hero is-fullheight">
-
-                <div class="hero-header">
-                    <img src="/red.db878d1d.png" alt="">
-                </div>
-                <div class="hero-body"></div>
-                <div class="hero-footer">
-                    <img style="margin-bottom: -25px;" src="/blue.5514c4c2.png" alt="">
-                </div>
+    <div id="login-container" class="terminal" data-aos="fade-up">
+        <form class="form" id="login-form">
+            <div class="field">
+                <input type="text" id="username" class="input" placeholder="Your username">
             </div>
-        </div>
-        <div class="hero-body">
-            <div id="login-container" class="container has-text-centered content is-small" data-aos="fade-up">
-                <div class="column is-4 is-offset-4">
-                    <div class="card box">
-                        <div class="card-content">
-                            <img src="/logo.6023b87e.png" alt="">
-                            <h3 class="title is-3 has-text-dark has-text-weight-light">Bienvenido. ¿Cual es tu nombre?
-                            </h3>
-                            <form class="form" id="login-form">
-                                <div class="field">
-                                    <input type="text" id="username" class="input" placeholder="Tu nombre">
-                                </div>
-                                <div class="field">
-
-                                </div>
-                                <button class="button is-primary">Acceder</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <img class="has-margin-top-20" src="/partners.53d7efe0.png" alt="">
+            <div class="field">
             </div>
-            <div id="room-container" class="container is-hidden" data-aos="fade-up">
-                <div class="columns">
-                    <div class="column is-8">
-                        <div class="card box">
-                            <div id="iframe-container" class="card-content">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/S-Mi2ANmJeQ?version=3&autoplay=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=S-Mi2ANmJeQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                            </div>
-                        </div>
-                        <div class="card box has-text-centered has-margin-top-20">
-                            <h4 class="title is-4">Espacio de actividades dinámicas 😁😁</h4>
-                            <div id="game-ui-container" class="card-content is-hidden">
-
-                            </div> 
-                            <div class="card-content is-hidden" id="rifa-ui-container">
-                                <h5 class="title is-5 has-text-primary">
-                                    ¡Empezó la rifa!
-                                </h5>
-                                <p>Prueba tu suerte. Coloca en el input un número del 1 al 100 y el primero que adivine,
-                                    ¡Gana!</p>
-                                <form class="form" id="number-form">
-                                    <div class="field has-addons">
-                                        <div class="control"><input type="number" placeholder="Coloca tu número acá! 😎😎" class="input" id="number-input"></div>
-                                        <div class="control"><button class="button is-primary">¡Jugar!</button></div>
-                                    </div>
-                                </form>
-
-                            </div>
+            <div class="inicio">
+            <button class="sentbutton">Join</button>
+            </div>
+        </form>
+    </div>
+    <div id="room-container" class="terminal is-hidden" data-aos="fade-up">
+        <div class="description">
+            <div class="card-header">
+                <h1>Chat Room</h1>
+            </div>
+            <div class="card-content">
+                <div id="message-container"></div>
+            </div>
+            <div class="card-footer">
+                <form class="form" id="send-container">
+                    <div class="field has-addons">
+                        <div class="control is-expanded"><input type="text" class="input is-rounded" id="message-input" placeholder="¡Escribe algo lindo!"></div>
+                        <div class="control"><button class="sentbutton" id="send-button"><span class="icon"><i data-feather="send"></i></span><span>Send</span></button>
                         </div>
                     </div>
-                    <div class="column is-4">
-                        <div class="card box">
-                            <div class="card-header"></div>
-                            <div class="card-content">
-                                <div id="message-container"></div>
-                            </div>
-                            <div class="card-footer">
-                                <form class="form" id="send-container">
-                                    <div class="field has-addons">
-                                        <div class="control is-expanded"><input type="text" class="input is-rounded" id="message-input" placeholder="¡Escribe algo lindo!"></div>
-                                        <div class="control"><button class="button is-primary is-rounded" id="send-button"><span class="icon"><i data-feather="send"></i></span><span>Enviar</span></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
