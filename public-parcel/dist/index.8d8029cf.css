@@ -33609,6 +33609,16 @@ body {
   padding: 4px;
 }
 
+.message.is-danger {
+  color: #fff;
+  opacity: .2;
+  background-color: #fff3;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  padding: 4px;
+}
+
 .content.is-small {
   color: #000;
   font-size: .75rem;
