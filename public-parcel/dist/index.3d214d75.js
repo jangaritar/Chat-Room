@@ -639,9 +639,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         socket.emit('disconnect');
     });
     /** Message stuff */ socket.on('chat-message', (data)=>{
-        appendMessage(`
-    <div class="content has-margin-bottom-5 is-small has-text-primary">${data.name}</div>
-    <div>${data.message}</div>
+        appendMessage(`    
+      <div class="has-text-right"><strong class="is-size-7">${data.name}</strong>: <span class="has-text-weight-light is-size-7">${data.message}</span></div>
     `, 'is-dark');
     });
     /** User Connection and Disconnection stuff */ socket.on('user-connected', (name)=>{
@@ -654,8 +653,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         e.preventDefault();
         const message = messageInput.value;
         appendMessage(`
-    <div class="content is-small has-text-primary margin-bottom-3">${name}</div>
-    <div>${message}</div>
+    
+    <strong class="is-size-7">${name}</strong>: <span class="has-text-weight-light is-size-7">${message}</span>
     `, 'is-primary');
         socket.emit('send-chat-message', message);
         messageInput.value = '';
@@ -663,7 +662,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     /** Message UI abstract */ function appendMessage(message, type) {
         let messageElement = document.createElement('div');
         messageElement.classList.add('message');
-        messageElement.classList.add('has-padding-5');
+        messageElement.classList.add('is-size-7');
         messageElement.classList.add(type);
         messageElement.innerHTML = message;
         messageContainer.appendChild(messageElement);

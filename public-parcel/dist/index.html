@@ -28,29 +28,36 @@
         </div>
         <div class="content" id="terminalContent">
             <div id="login-container" data-aos="fade-up">
-                <h1 class="has-text-centered is-uppercase has-text-primary">Chat Room</h1>
+                <h1 class="title is-4 has-text-left is-uppercase has-text-primary">Chat Room</h1>
                 <form class="form" id="login-form">
                     <div class="field">
-                        <input type="text" id="username" class="input is-primary" placeholder="Your username">
+                        <input type="text" id="username" class="input is-primary is-small" placeholder="YOUR USERNAME">
                     </div>
                     <div class="field">
                     </div>
                     <div class="inicio">
-                        <button type="submit" class="sentbutton has-cursor-pointer button is-small is-fullwidth">Join</button>
+                        <button type="submit" class="sentbutton has-cursor-pointer button is-small is-fullwidth">JOIN</button>
                     </div>
                 </form>
             </div>
             <div id="room-container" class="is-hidden" data-aos="fade-up">
                 <div class="description">
-                    <h1 class="has-text-centered is-uppercase has-text-primary">Chat Room</h1>
-                    <div class="card-content">
-                        <div id="message-container"></div>
+                    <div class="level mb-2">
+                        <h1 class="title is-4 is-uppercase has-text-primary mb-0">CHAT ROOM</h1> <div class="button is-small is-primary has-text-weight-bold has-text-dark" id="logout-button">Leave</div>
                     </div>
+                    
+                    <div id="message-container"></div>
+                   
                     <div class="card-footer">
                         <form class="form" id="send-container">
                             <div class="field has-addons">
-                                <div class="control is-expanded"><input type="text" class="input is-rounded" id="message-input" placeholder="¡Escribe algo lindo!"></div>
-                                <div class="control"><button class="sentbutton" id="send-button"><span class="icon"><i data-feather="send"></i></span><span>Send</span></button>
+                                <div class="control is-expanded">
+                                    <input type="text" class="input is-small" id="message-input" placeholder="write your message...">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-primary is-small has-text-dark has-text-weight-bold" id="send-button">
+                                        SEND
+                                    </button>
                                 </div>
                             </div>
                         </form>
