@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   loginForm.addEventListener('submit', e => {
     e.preventDefault()
     name = document.getElementById('username').value
-    appendMessage(`${name}, Wellcome to the room.`)
+    appendMessage(`be welcome, ${name}.`)
+    localStorage.setItem('userName', name)
     socket.emit('new-user', name)
     if (name != '') {
       setTimeout(() => {
@@ -38,6 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
       alert("insert your username")
     }
   })
+
+  if (localStorage.getItem('userName') != null) {
+    name = localStorage.getItem('userName')
+    document.querySelector('#login-container').classList.add('is-hidden')
+    document.querySelector('#room-container').classList.remove('is-hidden')
+    socket.emit('new-user', name)
+  }
+
+  const logoutButton = document.getElementById('logout-button')
+  logoutButton.addEventListener('click', () => {
+    name = ''
+    localStorage.removeItem('userName')
+    document.querySelector('#login-container').classList.remove('is-hidden')
+    document.querySelector('#room-container').classList.add('is-hidden')
+    socket.emit('disconnect')
+  })
+
 
   /** Message stuff */
 

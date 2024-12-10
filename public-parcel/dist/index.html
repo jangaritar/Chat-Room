@@ -5,40 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://localhost:5500/socket.io/socket.io.js" defer=""></script>
-    <script src="/admin.3d214d75.js" defer=""></script>
-    <link rel="stylesheet" href="/admin.8d8029cf.css">
+    <script src="/index.3d214d75.js" defer=""></script>
+    <link rel="stylesheet" href="/index.8d8029cf.css">
     <title>CHAT ROOM</title>
 </head>
 
 <body>
-    <div id="login-container" class="terminal" data-aos="fade-up">
-        <form class="form" id="login-form">
-            <div class="field">
-                <input type="text" id="username" class="input" placeholder="Your username">
+
+    <div class="terminal">
+        <div class="title-bar">
+            <div class="button-group-left">
+                <a href="./" class="button is-active" id="nameButton">The Anthropic Order</a>
+                <a href="./thecatalystboard" class="button" id="taskButton">The Catalyst Board</a>
+                <a href="./hallofchaos" class="button" id="nameButton">Hall of Chaos</a>
+                <a href="./staticcatch" class="button" id="staticButton">Static Catch</a>
             </div>
-            <div class="field">
+            <div class="button-group-right">
+                <a href="https://x.com/anthroorder" target="_blank" class="button">𝕏</a>
+                <a href="https://t.me/TAOdisxussgroup" target="_blank" class="button">Telegram</a>
+                <a href="https://dexscreener.com/solana/63zQAnw5YdWb2fYSmDv6D29YgekTi181VAnFcqLrvT6C" target="_blank" class="button">Dexscreener</a>
             </div>
-            <div class="inicio">
-            <button class="sentbutton">Join</button>
-            </div>
-        </form>
-    </div>
-    <div id="room-container" class="terminal is-hidden" data-aos="fade-up">
-        <div class="description">
-            <div class="card-header">
-                <h1>Chat Room</h1>
-            </div>
-            <div class="card-content">
-                <div id="message-container"></div>
-            </div>
-            <div class="card-footer">
-                <form class="form" id="send-container">
-                    <div class="field has-addons">
-                        <div class="control is-expanded"><input type="text" class="input is-rounded" id="message-input" placeholder="¡Escribe algo lindo!"></div>
-                        <div class="control"><button class="sentbutton" id="send-button"><span class="icon"><i data-feather="send"></i></span><span>Send</span></button>
-                        </div>
+        </div>
+        <div class="content" id="terminalContent">
+            <div id="login-container" data-aos="fade-up">
+                <h1 class="has-text-centered is-uppercase has-text-primary">Chat Room</h1>
+                <form class="form" id="login-form">
+                    <div class="field">
+                        <input type="text" id="username" class="input is-primary" placeholder="Your username">
+                    </div>
+                    <div class="field">
+                    </div>
+                    <div class="inicio">
+                        <button type="submit" class="sentbutton has-cursor-pointer button is-small is-fullwidth">Join</button>
                     </div>
                 </form>
+            </div>
+            <div id="room-container" class="is-hidden" data-aos="fade-up">
+                <div class="description">
+                    <h1 class="has-text-centered is-uppercase has-text-primary">Chat Room</h1>
+                    <div class="card-content">
+                        <div id="message-container"></div>
+                    </div>
+                    <div class="card-footer">
+                        <form class="form" id="send-container">
+                            <div class="field has-addons">
+                                <div class="control is-expanded"><input type="text" class="input is-rounded" id="message-input" placeholder="¡Escribe algo lindo!"></div>
+                                <div class="control"><button class="sentbutton" id="send-button"><span class="icon"><i data-feather="send"></i></span><span>Send</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

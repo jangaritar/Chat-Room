@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"8Pjs9":[function(require,module,exports,__globalThis) {
+})({"hoyON":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -665,6 +665,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 });
 
-},{}]},["8Pjs9","lMFI2"], "lMFI2", "parcelRequire94c2")
+},{}]},["hoyON","lMFI2"], "lMFI2", "parcelRequire94c2")
 
 //# sourceMappingURL=admin.fb57f787.js.map
