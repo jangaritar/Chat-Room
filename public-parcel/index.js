@@ -1,16 +1,8 @@
 import feather from 'feather-icons'
-import AOS from 'aos'
-import {
-  jarallax
-} from 'jarallax'
-import Bulma from '@vizuaalog/bulmajs';
-
 
 document.addEventListener('DOMContentLoaded', () => {
-  
 
   feather.replace()
-
 
   /** Socket stuff */
 
@@ -99,13 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
     messageContainer.appendChild(messageElement)
     messageContainer.scrollTop = messageContainer.scrollHeight;
   }
-
-  /** Stream Stuff */
-
-  /** Rifa Stuff */
-
-
-
-
   
 })
