@@ -54,26 +54,5 @@ io.on('connection', socket => {
         socket.broadcast.emit('user-disconnected', userName);
         socket.broadcast.emit('user-list', users);
     });
-
-    /** Stream Event */
-    socket.on('send-stream', stream => {
-        socket.broadcast.emit('new-stream', stream);
-    });
-
-    /** Rifa Events */
-    socket.on('send-number', number => {
-        rifaWinner = '';
-        socket.broadcast.emit('new-number', number);
-    });
-
-    socket.on('response-number', number => {
-        if (!rifaWinner) {
-            rifaWinner = users[socket.id];
-        }
-        socket.broadcast.emit('new-winner', {
-            winner: rifaWinner,
-            number: number,
-        });
-    });
 });
 
