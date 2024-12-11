@@ -4,7 +4,6 @@ const cors = require('cors');
 const app = express();
 const server = require('http').Server(app);
 const fs = require('fs');
-const { timeStamp } = require('console');
 const io = require('socket.io')(server, {
     cors: {
         origin: 'http://localhost:1234', // Cambia al dominio/puerto de tu cliente
