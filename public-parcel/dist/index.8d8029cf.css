@@ -33579,6 +33579,7 @@ body {
   border-radius: 2px;
   padding: 4px;
   margin-bottom: 8px !important;
+  line-height: 14px !important;
 }
 
 .message.is-primary {

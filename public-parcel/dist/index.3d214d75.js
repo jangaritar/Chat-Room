@@ -634,16 +634,30 @@ document.addEventListener('DOMContentLoaded', ()=>{
         document.querySelector('#room-container').classList.add('is-hidden');
         socket.emit('disconnect');
     });
+    const cleanHistoryButton = document.getElementById('clean-history-button');
+    cleanHistoryButton.addEventListener('click', ()=>{
+        cleanHistory();
+    });
+    function cleanHistory() {
+        if (confirm('Are you sure you want to clean the history?')) {
+            localStorage.setItem('cleanHistoryTimestamp', Date.now());
+            document.getElementById('message-container').innerHTML = '';
+        }
+    }
     /** Message stuff */ socket.on('chat-message', (data)=>{
         appendMessage(`    
       <div class="has-text-right"><strong class="is-size-7">${data.name}</strong>: <span class="has-text-weight-light is-size-7">${data.message}</span></div>
     `, 'is-dark');
     });
     /** History stuff */ socket.on('chat-history', (history)=>{
+        const cleanHistoryTimestamp = localStorage.getItem('cleanHistoryTimestamp');
         history.forEach((message)=>{
-            appendMessage(`
-        <div class="has-text-right"><strong class="is-size-7">${message.name}</strong>: <span class="has-text-weight-light is-size-7">${message.message}</span></div>
-      `, 'is-dark');
+            if (!cleanHistoryTimestamp || message.timestamp > cleanHistoryTimestamp) appendMessage(`
+          <div class="has-text-right" data-timestamp="${message.timestamp}">
+            <strong class="is-size-7">${message.name}</strong>: 
+            <span class="has-text-weight-light is-size-7">${message.message}</span> 
+          </div>
+        `, 'is-dark');
         });
     });
     /** User Connection and Disconnection stuff */ socket.on('user-connected', (name)=>{
@@ -655,11 +669,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
     /** Message UI Controller */ messageForm.addEventListener('submit', (e)=>{
         e.preventDefault();
         const message = messageInput.value;
+        const timestamp = Date.now();
         appendMessage(`
     
     <strong class="is-size-7">${name}</strong>: <span class="has-text-weight-light is-size-7">${message}</span>
     `, 'is-primary');
-        socket.emit('send-chat-message', message);
+        socket.emit('send-chat-message', {
+            message,
+            timestamp
+        });
         messageInput.value = '';
     });
     /** Message UI abstract */ function appendMessage(message, type) {

@@ -4,6 +4,7 @@ const cors = require('cors');
 const app = express();
 const server = require('http').Server(app);
 const fs = require('fs');
+const { timeStamp } = require('console');
 const io = require('socket.io')(server, {
     cors: {
         origin: 'http://localhost:1234', // Cambia al dominio/puerto de tu cliente
@@ -69,7 +70,8 @@ io.on('connection', socket => {
 
     socket.on('send-chat-message', message => {
         const chatMessage = {
-            message: message,
+            message: message.message,
+            timestamp: message.timestamp,
             name: users[socket.id],
         };
 
